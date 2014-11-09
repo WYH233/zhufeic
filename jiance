@@ -1,0 +1,15 @@
+task main()
+{
+  SetSensorLight(S2);
+  SetSensorLight(S3);
+  int L=0; //定义
+  int R=0;//同上
+  while(true)
+  {
+    ClearScreen();//清屏
+    L = Sensor(S2);
+    NumOut(30,LCD_LINE3,L);
+    R = Sensor(S3);
+    NumOut(30,LCD_LINE2,R);
+    Wait(300);
+  }
